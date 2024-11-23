@@ -48,9 +48,9 @@ void loop() {
   // Creating a JSON formatted string to send via MQTT
   String payload = "{\"ph\": ";
   payload += ph;
-  payload += ", \"temp\": ";
+  payload += ",\"temp\": ";
   payload += String(temp);
-  payload += ", \"hum\": ";
+  payload += ",\"hum\": ";
   payload += String(hum);
   payload += "}";
 
@@ -80,13 +80,13 @@ String photores() {
   display.setCursor(130, 10); // Adjust the position as needed
   if (analogValue < 40) {
     display.print(" Very bright");
-    a = " Very bright";
+    a = "Very bright";
   } else if (analogValue < 800) {
     display.print(" Bright");
-    a = " Bright";
+    a = "Bright";
   } else if (analogValue < 2000) {
     display.print(" Light");
-    a = " Light";
+    a = "Light";
   } else if (analogValue < 3200) {
     display.print(" Dim");
     a = "Dim";
